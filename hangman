@@ -1,0 +1,17 @@
+phrase = input("Enter a phrase: \n")
+print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+phrase_array = list(phrase)
+
+def print_current_state(guess):
+    for i in range(len(phrase_array)):
+        if phrase_array[i] != " ":
+            if guess is phrase_array[i]:
+                print(guess)
+            else:
+                print("-", end='')
+        else:
+            print(" ", end='')
+
+
+while True:
+    guess = input("guess a number")
